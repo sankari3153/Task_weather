@@ -1,30 +1,17 @@
-Step 1: Install Node.js from https://nodejs.org if it is not already installed.
+# Simple Weather App
 
-Step 2: Open terminal or command prompt and create a new React project by running:
-npx create-react-app weather-app
+This is a basic React app that shows the current weather of any city. The user types a city name, and the app fetches weather data using the OpenWeatherMap API.
 
-Step 3: Navigate to the project folder:
-cd weather-app
+## Steps to Run
 
-Step 4: Inside the src folder, create a new folder called components, and inside it, create a file named WeatherCard.js.
+1. Install Node.js on your system.
+2. Create the app using: `npx create-react-app weather-app`
+3. Go into the project: `cd weather-app`
+4. Create a `.env` file in the root and add:  
+   `REACT_APP_WEATHER_API_KEY=your_api_key_here`
+5. Get your API key from: https://openweathermap.org/api
+6. Replace the code in `App.js`, create a `WeatherCard.js` inside `src/components`, and style using `App.css`.
+7. Install dependencies: `npm install`
+8. Run the app: `npm start`
 
-Step 5: Open the App.js file and replace its content with the React code that fetches weather data using the OpenWeatherMap API and displays city, temperature, humidity, description, and an icon.
-
-Step 6: In WeatherCard.js, write the code to display the weather result using props passed from App.js.
-
-Step 7: In the root of your project folder, create a file named .env and paste your API key like this (no quotes):
-REACT_APP_WEATHER_API_KEY=your_api_key_here
-
-Step 8: Get your API key by signing up at https://openweathermap.org/api, logging in, and copying your key from the API keys section.
-
-Step 9: Open the terminal and install all required dependencies by running:
-npm install
-
-Step 10: Start the app using the command:
-npm start
-
-Step 11: The app will open in your browser at http://localhost:3000. Enter a city name, click the button, and it will show the weather details. If the city is invalid, an error message will appear. While fetching, a loading message will be shown.
-
-Step 12: For styling, edit the App.css file to include background design, card layout, input styling, and error message styles.
-
-Step 13: The app is now ready. It includes React hooks (useState), functional components, API fetch, .env file usage, and proper error handling.
+The app will open in your browser at `http://localhost:3000`. Enter a city name to see the temperature, humidity, weather condition, and an icon. It also shows errors for invalid city names and a loading message while fetching.
